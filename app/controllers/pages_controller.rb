@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-  	@links = Link.all
+  	@link = Link.all
   end
 end
 

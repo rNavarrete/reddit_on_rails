@@ -22,6 +22,10 @@ GEM
       activesupport (= 3.2.14)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
+    activerecord-postgres-hstore (0.7.6)
+      activerecord (>= 3.1)
+      pg-hstore (>= 1.1.5)
+      rake
     activeresource (3.2.14)
       activemodel (= 3.2.14)
       activesupport (= 3.2.14)
@@ -61,6 +65,7 @@ GEM
     multi_json (1.8.0)
     orm_adapter (0.4.0)
     pg (0.16.0)
+    pg-hstore (1.2.0)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -120,6 +125,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-postgres-hstore
   coffee-rails (~> 3.2.1)
   devise
   jquery-rails
