@@ -2,4 +2,7 @@
   <% @link.each do |link| %>
     <li><%= link_to link.title, link.url %></li>
   <% end %>
+
+  <%= will_paginate @link %>
+
 </ul>
