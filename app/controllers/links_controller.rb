@@ -1,4 +1,6 @@
 class LinksController < ApplicationController
+  before_filter :authenticate_user!
+
   def show
     @link    = Link.find(params[:id])
     @comment = Comment.new
@@ -9,7 +11,7 @@ class LinksController < ApplicationController
   end
 
   def create
-    @link = Link.create(params[:link])
+    @link = current_user.links.create(params[:link])
 
     respond_to do |format|
       if @link.save
