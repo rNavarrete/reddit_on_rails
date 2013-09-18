@@ -2,7 +2,6 @@
   <% @link.each do |link| %>
     <li><%= link_to link.title, link.url %></li>
     <%= link_to "comments", link %>
-    
     <% if current_user && current_user.votes.where(:link_id => link.id, :up => true).present? %>
       *
     <% else %>
@@ -10,11 +9,9 @@
     <% end %>
 
 
-
     <% if current_user && current_user.votes.where(:link_id => link.id, :up => false).present? %>
       *
     <% else %>  
-    
       <%= link_to "-", votes_path(:vote => {:link_id => link.id, :up => false}), :method => :post %>
     <% end %>
 
