@@ -8,7 +8,7 @@ gem 'rails', '3.2.14'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem "devise"
 gem 'will_paginate'
-
+gem 'texticle', :require => 'texticle/rails'
 gem 'pg'
 
 

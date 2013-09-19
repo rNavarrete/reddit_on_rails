@@ -9,13 +9,13 @@ development:
   encoding: unicode
   database: rolands_reddit
   pool: 5
-  username:archshot
-  password:godfather
+  username: 
+  password: 
 
 test:
   adapter: postgresql
   encoding: unicode
   database: rolands_reddit2
   pool: 5
-  username:archshot
-  password:godfather
+  username: 
+  password: 

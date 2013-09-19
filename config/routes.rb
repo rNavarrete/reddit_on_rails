@@ -18,6 +18,9 @@ RedditOnRails::Application.routes.draw do
     resources :comments
     resources :votes
 
+    get 'search' => 'search#index'
+
+
 
   # Sample resource route with options:
   #   resources :products do

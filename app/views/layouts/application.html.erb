@@ -47,8 +47,9 @@
                 <li><%= link_to 'Add a Link', new_link_path %></li>
               <%# user is not logged in, show signup and login links %>
               <% else %>
-                <li><%= link_to 'Sign In', new_user_session_path %></li> |
                 <li><%= link_to 'Register Now!', new_user_registration_path %></li>
+                <li><%= link_to 'Sign In', new_user_session_path %></li>|
+
               <% end %>
             </ul>
           </div>
@@ -56,8 +57,10 @@
             IMPORTANT:
             This is Heroku specific markup. Remove to customize.
           -->
-          <a href="/" class="brand" id="heroku">by <strong>heroku</strong></a>
-          <!-- /// -->
+         <%= form_tag(search_path, :method => "get", :style => "margin: 10px 0 0 0") do %>
+           <%= text_field_tag(:q, nil, :placeholder => "search") %>
+           <%= submit_tag("Search") %>
+          <% end %>          <!-- /// -->
         </div>
       </div>
     </div>
