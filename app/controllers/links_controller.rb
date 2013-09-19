@@ -25,7 +25,5 @@ class LinksController < ApplicationController
           notice: "Link successfully submitted." }
       end
     end
-
-
   end
 end

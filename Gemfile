@@ -10,6 +10,9 @@ gem "devise"
 gem 'will_paginate'
 gem 'texticle', :require => 'texticle/rails'
 gem 'pg'
+gem "nokogiri", "~> 1.6.0"
+gem "libv8", "~> 3.16.14.3"
+gem "launchy", "~> 2.3.0"
 
 
 # Gems used only for assets and not required
@@ -23,6 +26,11 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :test do
+  gem 'database_cleaner'
+  gem 'capybara'
+end
 
 
 group :production do
